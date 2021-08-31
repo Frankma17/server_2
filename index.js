@@ -5,9 +5,9 @@ let status = 202;
 
 app.get('/', (req, res) => {
 
-  let option = random(random(random(0,1),1),1)
+  let option = random(0,9)
   if (status === 202) {
-    if (option === 1) {
+    if (option != 1 && option != 5) {
       res.status(202).send('ERROR 202');
       status = 202;
       console.log("ERROR 202")
